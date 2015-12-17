@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d2d7d3;
+    position: relative;
+}
+
+#game {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.flip-container {
+    float: left;
+    height: 148px;
+    width: 23%;
+    border-radius: 4px;
+    margin: 8px 1%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.n,
+.t {
+    padding: 0 16px;
+    height: 60px;
+    line-height: 60px;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.front {
+    background-color: #555;
+}
+.back {
+    background-color: white;
+}
+
+
+.flip-container {
+	perspective: 1000;
+	transform-style: preserve-3d;
+}
+.flip-container.opened .back,
+.flip-container.used .back {
+    transform: rotateY(0deg);
+}
+.flip-container.opened .front,
+.flip-container.used .front {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+	width: 100%;
+	height: 148px;
+    border-radius: 4px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(-180deg);
+}
+
+.num {
+    font-size: 86px;
+    line-height: 148px;
+    text-align: center;
+    color: #555;
+}
+.flip-container.opened .num {
+    background-color: #be90d4;
+    color: white;
+}
+#targetn {
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 30px;
+    color: red;
+}
+#nflips {
+    display: inline-block;
+    padding: 0 16px;
+}
