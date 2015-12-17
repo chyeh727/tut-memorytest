@@ -109,3 +109,21 @@ body {
     display: inline-block;
     padding: 0 16px;
 }
+
+@media (max-width: 540px) {
+    .flip-container {
+        height: 120px;
+    }
+    .front, .back {
+        height: 120px;
+    }
+    .num {
+        font-size: 72px;
+        line-height: 120px;
+    }
+}
+@media (max-width: 480px) {
+    .num {
+        font-size: 64px;
+    }
+}
